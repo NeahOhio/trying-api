@@ -5,9 +5,9 @@ const jwtKey = 'amerta';
 var session = require('express-session')
 
 
-const RegisterAuth = async (req, res) => {
+const RegisterAuth = (req, res) => {
     try {
-        await Auth.find({ Auth_email: req.body.email }).exec().then(user => {
+         Auth.find({ Auth_email: req.body.email }).exec().then(user => {
             if (user.length >= 1) {
                 return res.status(409).json({
                     message: "Email sudah Terdaftar"

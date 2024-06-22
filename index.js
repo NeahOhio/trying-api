@@ -61,7 +61,7 @@ app.get("/", (req, res) => {
 
 mongoose
   .connect(
-    "mongodb://localhost:27017/internal-amerta"
+    "mongodb://db-logistik:Serverl0g1st1k@77.37.47.90:27017/?authSource=db-logistik"
   )
   .then(() => {
     console.log("Connected to database!");

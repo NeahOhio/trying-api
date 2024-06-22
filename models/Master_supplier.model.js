@@ -36,7 +36,11 @@ const Master_supplierSchema = mongoose.Schema(
     master_supplier_user_updated:{
         type:String,
         required:[true, "TOLONG JANGAN DIKOSONGI"]
-    }
+    },
+    master_supplier_phone:{
+      type:String,
+      required:[true, "TOLONG JANGAN DIKOSONGI"]
+  }
   },
   {
     timestamps: true,

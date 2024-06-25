@@ -2,7 +2,7 @@ const Tr_task = require("../../models/Module_2/Tr_task.model");
 // GET BY DOMAIN
 const getTrTask = async (req, res) => {
   try {
-    const TrTask = await Tr_task.find({  Tr_status: "Y" });
+    const TrTask = await Tr_task.find({  Tr_task_status: "Y", Tr_task_domain: req.params.domain });
     res.status(200).json(TrTask);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -14,6 +14,15 @@ const getTrTaskid = async (req, res) => {
   try {
     const { id } = req.params;
     const TrTask = await Tr_task.findById(id);
+    res.status(200).json(TrTask);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
+// FIND WITH CATEGORY(MT,PSB,INFRA)
+const getTrTaskByCategory = async (req,res) => {
+  try {
+    const TrTask = await Tr_task.find({  Tr_status: "Y", Tr_task_domain: req.params.domain,Tr_task_kategori:req.params.kategori });
     res.status(200).json(TrTask);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -80,6 +89,7 @@ const updateTrTask = async (req, res) => {
 module.exports = {
   getTrTask,
   getTrTaskid,
+  getTrTaskByCategory,
   createTrTask,
   createTrTaskGambar,
   updateTrTask,

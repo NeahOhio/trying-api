@@ -20,6 +20,8 @@ const cors = require("cors")
 // Kelola data internal -----------
 const Master_perusahaanRoute = require("./routes/Module_2/Master_perusahaan.route.js");
 const Tr_taskRoute = require("./routes/Module_2/Tr_task.route.js");
+const Master_penggunaRoute = require("./routes/Module_2/Master_pengguna.route.js");
+
 
 
 
@@ -50,6 +52,7 @@ app.use("/api/Tr_logistic_keluar",Tr_logisticKeluarRoute )
 // Kelola data internal -------------
 app.use("/api/Master_perusahaan", Master_perusahaanRoute)
 app.use("/api/Tr_task",Tr_taskRoute)
+app.use("/api/Master_pengguna", Master_penggunaRoute)
 
 
 
@@ -60,7 +63,8 @@ app.get("/", (req, res) => {
 
 mongoose
   .connect(
-    "mongodb://coba:coba123@77.37.47.90:27017/?authSource=coba"
+    // "mongodb://coba:coba123@77.37.47.90:27017/?authSource=coba"
+    "mongodb://localhost:27017"
   )
   .then(() => {
     console.log("Connected to database!");

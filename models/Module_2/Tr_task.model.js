@@ -33,7 +33,7 @@ const TrtaskSchema = new Schema({
     Tr_task_pegawai_list_penangan:{
         type:Array,
         default:"[]"
-    }
+    },
 });
 const Tr_task = mongoose.model('Tr_task', TrtaskSchema);
 module.exports = Tr_task;

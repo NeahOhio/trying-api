@@ -10,7 +10,7 @@ const
         createMasterPerusahaanGambar,
         updateMasterPerusahaan,
         updateMasterPerusahaanGambar,
-    } = require('../../controllers/Module_2/Master_perusahaan.controller.js');
+    } = require('../../controllers/Module_2/Master_perusahaan.js');
 // Multer storage configuration nanti setelah front-end jadi
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {

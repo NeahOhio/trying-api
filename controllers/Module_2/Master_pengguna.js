@@ -10,6 +10,16 @@ const getMasterpengguna = async (req, res) => {
   }
 };
 
+// get by PIC 
+const getMasterpenggunaByPic = async (req,res) => {
+  try {
+    const Masterpengguna = await Master_pengguna.find({  "pengguna_pic.pengguna_pic_name": req.params.pic_name });
+    res.status(200).json(Masterpengguna);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+}
+
 // FIND ONE BY ID
 const getMasterpenggunaid = async (req, res) => {
   try {
@@ -80,6 +90,7 @@ const updateMasterpengguna = async (req, res) => {
 
 module.exports = {
   getMasterpengguna,
+  getMasterpenggunaByPic,
   getMasterpenggunaid,
   createMasterpengguna,
   createMasterpenggunaGambar,

@@ -16,7 +16,7 @@ const TrtaskSchema = new Schema({
         type: String,
         required: true
     },
-    // PSB,MT,INFRA 
+    // PSB,MT,INFRA , NEW-PSB
     Tr_task_kategori:{
         type:String
     },
@@ -28,7 +28,8 @@ const TrtaskSchema = new Schema({
         default:"[]"
     },
     Tr_task_pic:{
-        type:String
+        type:Object
+        
     },
     Tr_task_pegawai_list_penangan:{
         type:Array,

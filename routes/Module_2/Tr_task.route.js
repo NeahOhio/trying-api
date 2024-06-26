@@ -8,6 +8,7 @@ const {
   getTrTask,
   getTrTaskid,
   getTrTaskByCategory,
+  getTrTaskByPicName,
   createTrTask,
   createTrTaskGambar,
   updateTrTask,
@@ -18,6 +19,8 @@ const {
 router.get("/gettask/:domain", getTrTask);
 router.get("/gettaskbyid/:id", getTrTaskid);
 router.get("/gettaskbycategory/:domain/:kategori", getTrTaskByCategory);
+router.get("/gettaskbypicname/:pic_name", getTrTaskByPicName);
+
 
 router.post("/createtask", createTrTask);
 router.post("/createtaskwithimage", createTrTaskGambar);

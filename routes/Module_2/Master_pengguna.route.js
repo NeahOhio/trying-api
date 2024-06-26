@@ -5,6 +5,7 @@ const router = express.Router();
 const
     {
         getMasterpengguna,
+        getMasterpenggunaByPic,
         getMasterpenggunaid,
         createMasterpengguna,
         createMasterpenggunaGambar,
@@ -24,6 +25,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 // ----
 router.get("/Masterpengguna/getdata/:domain", getMasterpengguna);
+router.get("/Masterpengguna/getdatabypic/:pic_name", getMasterpenggunaByPic);
 router.get("/Masterpengguna/getbyid/:id", getMasterpenggunaid);
 router.post("/Masterpengguna/create", createMasterpengguna);
 router.post("/Masterpengguna/createimage", upload.single('pengguna_gambar'), createMasterpenggunaGambar);

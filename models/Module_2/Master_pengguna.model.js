@@ -31,8 +31,7 @@ const PenggunaSchema = new Schema({
         required: true
     },
     pengguna_pic:{
-        type:String,
-        required: true
+        type:Object
     },
     pengguna_alat:{
         type:Array,

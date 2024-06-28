@@ -13,37 +13,55 @@ const Master_itemSchema = mongoose.Schema(
     },
 
     item_domain: {
-        type: String,
-        required: [true, "ITEM DOMAIN TOLONG JANGAN DIKOSONGI"]
+      type: String,
+      required: [true, "ITEM DOMAIN TOLONG JANGAN DIKOSONGI"]
     },
-
     item_harga: {
       type: String,
       required: [true, "ITEM HARGA TOLONG JANGAN DIKOSONGI"],
     },
-    item_created:{
-        type:String,
-        required:[true, "ITEM CREATED TOLONG JANGAN DIKOSONGI"]
+    item_created: {
+      type: String,
+      required: [true, "ITEM CREATED TOLONG JANGAN DIKOSONGI"]
     },
-    item_updated:{
-        type:String,
-        required:[true, "ITEM UPDATED TOLONG JANGAN DIKOSONGI"]
+    item_updated: {
+      type: String,
+      required: [true, "ITEM UPDATED TOLONG JANGAN DIKOSONGI"]
     },
-    item_user_updated:{
-        type:String,
-        required:[true, "ITEM USER UPDATED TOLONG JANGAN DIKOSONGI"]
+    item_user_updated: {
+      type: String,
+      required: [true, "ITEM USER UPDATED TOLONG JANGAN DIKOSONGI"]
     },
-    item_status:{
-        type:String,
-        required:[true, "ITEM STATUS TOLONG JANGAN DIKOSONGI"]
+    item_status: {
+      type: String,
+      required: [true, "ITEM STATUS TOLONG JANGAN DIKOSONGI"]
     },
-    item_invoice_asal:{
-        type:String,
-        required:[true,"INVOICE ASAL TOLONG JANGAN DIKOSONGI"]
+    item_satuan: {
+      type: String
     },
-    item_history:{
-        type:Array,
-        "default":[]
+    /// History pembelian bos 
+    item_history: {
+      type: Array,
+      "default": []
+    },
+    item_list: {
+      type: Array,
+      "default": []
+    },
+    item_qc: {
+      type: Array,
+      "default": []
+    },
+    item_history_pemakaian_kabel: {
+      type: Array,
+      "default": []
+    },
+    item_gambar: {
+      type: String,
+      "default":"NO-GAMBAR"
+    },
+    item_husble:{
+      type: String
     }
   },
   {

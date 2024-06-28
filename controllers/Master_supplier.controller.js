@@ -3,7 +3,7 @@ const Master_supplier = require("../models/Master_supplier.model");
 // GET DATA
 const getMasterSupplier = async (req, res) => {
   try {
-    const MasterSupplier = await Master_supplier.find({Master_supplier_status:"Y"});
+    const MasterSupplier = await Master_supplier.find({master_supplier_status:"Y"});
     res.status(200).json(MasterSupplier);
   } catch (error) {
     res.status(500).json({ message: error.message });

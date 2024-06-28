@@ -18,6 +18,7 @@ const Master_pengadaan_barang = require("./routes/Master_pengadaan_barang.route.
 const Tr_logisticRoute = require("./routes/Tr_logistic.route.js");
 const Tr_logisticKeluarRoute = require("./routes/Tr_logistic_keluar.route.js");
 const Tr_qc = require("./routes/Tr_qc.route.js");
+const Tr_reinput = require("./routes/Tr_reinput.route.js")
 const cors = require("cors")
 
 
@@ -47,6 +48,8 @@ app.use("/api/Master_pengadaan_barang", Master_pengadaan_barang)
 app.use("/api/Tr_qc", Tr_qc)
 app.use("/api/Tr_logistic", Tr_logisticRoute)
 app.use("/api/Tr_logistic_keluar", Tr_logisticKeluarRoute)
+app.use("/api/Tr_reinput", Tr_reinput)
+
 
 
 

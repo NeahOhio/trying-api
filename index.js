@@ -19,6 +19,7 @@ const Tr_logisticKeluarRoute = require("./routes/Tr_logistic_keluar.route.js");
 const Tr_qc = require("./routes/Tr_qc.route.js");
 const Tr_reinput = require("./routes/Tr_reinput.route.js")
 const Tr_pembayaran = require("./routes/Tr_pembayaran.route.js")
+const Tr_closing = require("./routes/Tr_closing.route.js")
 const cors = require("cors")
 
 
@@ -49,6 +50,7 @@ app.use("/api/Tr_logistic", Tr_logisticRoute)
 app.use("/api/Tr_logistic_keluar", Tr_logisticKeluarRoute)
 app.use("/api/Tr_reinput", Tr_reinput)
 app.use("/api/Tr_pembayaran", Tr_pembayaran)
+app.use("/api/Tr_closing", Tr_closing)
 
 
 

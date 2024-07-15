@@ -18,6 +18,7 @@ const Tr_logisticRoute = require("./routes/Tr_logistic.route.js");
 const Tr_logisticKeluarRoute = require("./routes/Tr_logistic_keluar.route.js");
 const Tr_qc = require("./routes/Tr_qc.route.js");
 const Tr_reinput = require("./routes/Tr_reinput.route.js")
+const Tr_pembayaran = require("./routes/Tr_pembayaran.route.js")
 const cors = require("cors")
 
 
@@ -47,6 +48,7 @@ app.use("/api/Tr_qc", Tr_qc)
 app.use("/api/Tr_logistic", Tr_logisticRoute)
 app.use("/api/Tr_logistic_keluar", Tr_logisticKeluarRoute)
 app.use("/api/Tr_reinput", Tr_reinput)
+app.use("/api/Tr_pembayaran", Tr_pembayaran)
 
 
 
@@ -64,8 +66,8 @@ app.get("/", (req, res) => {
 
 mongoose
     .connect(
-        // "mongodb://localhost:27017/internal-amerta"
-        "mongodb://root:ServerAmerta2024@77.37.47.90:27017/dbAmerta"
+        "mongodb://localhost:27017/internal-amerta"
+        // "mongodb://root:ServerAmerta2024@77.37.47.90:27017/dbAmerta"
     )
     .then(() => {
         console.log("Connected to database!");

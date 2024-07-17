@@ -11,6 +11,7 @@ const Master_list_itemRoute = require("./routes/Master_list_item.route.js");
 const Master_supplier = require("./routes/Master_supplier.route.js");
 const Master_harga_materialRoute = require("./routes/Master_harga_material.route.js");
 const Master_pengadaan_barang = require("./routes/Master_pengadaan_barang.route.js")
+const Master_pengguna = require("./routes/Master_pengguna.route.js");
 
 
 // Transaksi 
@@ -38,10 +39,10 @@ app.use("/api/products", productRoute);
 // Master 
 app.use("/api/Master_item", Master_itemRoute);
 app.use("/api/Master_list_item", Master_list_itemRoute)
-
 app.use("/api/Master_supplier", Master_supplier)
 app.use("/api/Master_harga_material", Master_harga_materialRoute)
 app.use("/api/Master_pengadaan_barang", Master_pengadaan_barang)
+app.use("/api/Master_pengguna", Master_pengguna);
 
 
 // Transaksi 
